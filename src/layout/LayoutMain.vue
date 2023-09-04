@@ -7,52 +7,63 @@
             <template #title>
               <el-icon><message /></el-icon>学习
             </template>
-            <el-menu-item-group>
-              <template #title>Group 1</template>
-              <el-menu-item index="1-1">Option 1</el-menu-item>
-              <el-menu-item index="1-2">Option 2</el-menu-item>
+            <el-menu-item-group title="Java基础">
+              <!--              <el-menu-item index="1-1">Option 1</el-menu-item>-->
+              <!--              <el-menu-item index="1-2">Option 2</el-menu-item>-->
             </el-menu-item-group>
-            <el-menu-item-group title="Group 2">
-              <el-menu-item index="1-3">Option 3</el-menu-item>
+            <el-menu-item-group title="Mysql">
+<!--              <el-menu-item index="1-1">Option 1</el-menu-item>-->
+<!--              <el-menu-item index="1-2">Option 2</el-menu-item>-->
             </el-menu-item-group>
-            <el-sub-menu index="1-4">
-              <template #title>Option4</template>
-              <el-menu-item index="1-4-1">Option 4-1</el-menu-item>
-            </el-sub-menu>
+            <el-menu-item-group title="算法">
+<!--              <el-menu-item index="1-3">Option 3</el-menu-item>-->
+            </el-menu-item-group>
+            <el-menu-item-group title="技术方案">
+              <!--              <el-menu-item index="1-3">Option 3</el-menu-item>-->
+            </el-menu-item-group>
           </el-sub-menu>
           <el-sub-menu index="2">
             <template #title>
               <el-icon><icon-menu /></el-icon>生活
             </template>
             <el-menu-item-group>
-              <template #title>Group 1</template>
-              <el-menu-item index="2-1">Option 1</el-menu-item>
-              <el-menu-item index="2-2">Option 2</el-menu-item>
+              <template #title>旅行</template>
+<!--              <el-menu-item index="2-1">Option 1</el-menu-item>-->
+<!--              <el-menu-item index="2-2">Option 2</el-menu-item>-->
             </el-menu-item-group>
-            <el-menu-item-group title="Group 2">
-              <el-menu-item index="2-3">Option 3</el-menu-item>
+            <el-menu-item-group title="聚会">
+<!--              <el-menu-item index="2-3">Option 3</el-menu-item>-->
             </el-menu-item-group>
-            <el-sub-menu index="2-4">
-              <template #title>Option 4</template>
-              <el-menu-item index="2-4-1">Option 4-1</el-menu-item>
-            </el-sub-menu>
           </el-sub-menu>
           <el-sub-menu index="3">
             <template #title>
-              <el-icon><setting /></el-icon>福利
+              <el-icon><setting /></el-icon>帮助
             </template>
-            <el-menu-item-group>
-              <template #title>Group 1</template>
-              <el-menu-item index="3-1">Option 1</el-menu-item>
-              <el-menu-item index="3-2">Option 2</el-menu-item>
+            <el-menu-item-group title="支付宝口令红包" @click="$router.push({
+          path:'/help',query:{
+            a:'Option 3'
+          }
+          })">
+              <!--              <el-menu-item index="1-1">Option 1</el-menu-item>-->
+              <!--              <el-menu-item index="1-2">Option 2</el-menu-item>-->
             </el-menu-item-group>
-            <el-menu-item-group title="Group 2">
-              <el-menu-item index="3-3">Option 3</el-menu-item>
+            <el-menu-item-group title="微信红包" @click="$router.push({
+          path:'/help',query:{
+            a:'Option 3'
+          }
+          })">
+              <!--              <el-menu-item index="1-1">Option 1</el-menu-item>-->
+              <!--              <el-menu-item index="1-2">Option 2</el-menu-item>-->
             </el-menu-item-group>
-            <el-sub-menu index="3-4">
-              <template #title>Option 4</template>
-              <el-menu-item index="3-4-1">Option 4-1</el-menu-item>
-            </el-sub-menu>
+          </el-sub-menu>
+          <el-sub-menu index="4">
+            <template #title>
+              <el-icon><message /></el-icon>我的小店
+            </template>
+            <el-menu-item-group title="汉服">
+              <!--              <el-menu-item index="1-1">Option 1</el-menu-item>-->
+              <!--              <el-menu-item index="1-2">Option 2</el-menu-item>-->
+            </el-menu-item-group>
           </el-sub-menu>
         </el-menu>
       </el-scrollbar>
@@ -60,7 +71,7 @@
 
     <el-container>
       <el-header style="font-size: 12px;background: white; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);">
-<!--        <el-input style="width: 70%;padding-left: 0" v-model="inputValue" placeholder="Please input"></el-input>-->
+        <el-input style="width: 70%;padding-left: 0" v-model="inputValue" placeholder="Please input"></el-input>
         <div class="toolbar">
           <el-dropdown>
             <el-icon style="margin-right: 350px; margin-top: 3px"
