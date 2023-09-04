@@ -79,7 +79,7 @@
             a:'Option 3'
           }
           })">半岛铁盒</span>
-          <el-avatar :size="50" :src="circleUrl" />
+<!--          <el-avatar :size="50" :src="circleUrl" />-->
         </div>
       </el-header>
 
@@ -93,15 +93,15 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+// import { ref } from 'vue'
 import { Menu as IconMenu, Message, Setting } from '@element-plus/icons-vue'
 
-const item = {
-  date: '2016-05-02',
-  name: 'Tom',
-  address: 'No. 189, Grove St, Los Angeles',
-}
-const tableData = ref(Array.from({ length: 20 }).fill(item))
+// const item = {
+//   date: '2016-05-02',
+//   name: 'Tom',
+//   address: 'No. 189, Grove St, Los Angeles',
+// }
+// const tableData = ref(Array.from({ length: 20 }).fill(item))
 </script>
 
 <style scoped>
