@@ -60,7 +60,7 @@
 
     <el-container>
       <el-header style="font-size: 12px;background: white; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);">
-        <el-input style="width: 70%;padding-left: 0" v-model="inputValue" placeholder="Please input"></el-input>
+<!--        <el-input style="width: 70%;padding-left: 0" v-model="inputValue" placeholder="Please input"></el-input>-->
         <div class="toolbar">
           <el-dropdown>
             <el-icon style="margin-right: 350px; margin-top: 3px"
