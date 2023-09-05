@@ -2,7 +2,7 @@
   <el-container class="layout-container-demo" >
     <el-aside width="200px">
       <el-scrollbar>
-        <el-menu :default-openeds="['1', '3']">
+        <el-menu :default-openeds="['1', '3']" style="height: 120vh">
           <el-sub-menu index="1">
             <template #title>
               <el-icon><message /></el-icon>学习
