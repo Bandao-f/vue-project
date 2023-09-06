@@ -39,7 +39,7 @@
             <template #title>
               <el-icon><setting /></el-icon>帮助
             </template>
-            <el-menu-item-group title="支付宝口令红包" @click="$router.push({
+            <el-menu-item-group title="支付宝红包" @click="$router.push({
           path:'/help',query:{
             a:'Option 3'
           }
@@ -113,6 +113,8 @@ import { Menu as IconMenu, Message, Setting } from '@element-plus/icons-vue'
 //   address: 'No. 189, Grove St, Los Angeles',
 // }
 // const tableData = ref(Array.from({ length: 20 }).fill(item))
+// 富文本组件随时更新已经上传的富文本id
+
 </script>
 
 <style scoped>

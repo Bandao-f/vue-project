@@ -16,7 +16,7 @@
       </el-button>
       <el-dialog
           v-model="dialogVisible"
-          title="我已经收到请求啦~ 等我看见消息以后我就回去发支付宝口令红包，记住这个口令：迟一些你再去领叭~"
+          title="我已经收到请求啦~ 等我看见消息以后就会给你转个小红包，你迟一些你再去看叭~"
           width="46%"
           :before-close="beforeDialogClose"
       >
@@ -44,7 +44,20 @@ export default {
     handleClick() {
       this.isDisabled = true;
       this.buttonText = '我收到请求啦~';
+      this.request()
       this.openDialog()
+    },
+    request() {
+      fetch('http://localhost:8088/transController/reportAlipay?param='+this.inputValue)
+          .then(response => response.json())
+          .then(data => {
+            // 在这里处理返回的数据
+            console.log(data);
+          })
+          .catch(error => {
+            // 处理错误
+            console.error(error);
+          });
     },
     openDialog() {
       this.dialogVisible = true; // 打开对话框
@@ -67,6 +80,7 @@ export default {
       isDisabled: false,
       dialogVisible: false, // 对话框可见性
       buttonText: '点击我我就会去发支付宝红包~',
+      inputValue:'',
       article: {
         title: "请确定你真的需要",
         content0: "如果你正面临以下情况:",
