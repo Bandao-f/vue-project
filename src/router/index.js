@@ -3,7 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import LayoutMain from '../layout/LayoutMain.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory('/dist'),
   routes: [
     {
       path:'/',
