@@ -48,7 +48,7 @@
               <!--              <el-menu-item index="1-2">Option 2</el-menu-item>-->
             </el-menu-item-group>
             <el-menu-item-group title="微信红包" @click="$router.push({
-          path:'/help',query:{
+          path:'/article',query:{
             a:'Option 3'
           }
           })">
