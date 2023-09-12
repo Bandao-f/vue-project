@@ -1,22 +1,27 @@
 <template>
-  <el-container class="layout-container-demo" >
+  <el-container class="layout-container-demo">
     <el-aside width="200px">
       <el-scrollbar>
         <el-menu :default-openeds="['1', '3']" style="height: 120vh">
           <el-sub-menu index="1">
             <template #title>
-              <el-icon><message /></el-icon>学习
+              <el-icon>
+                <message/>
+              </el-icon>
+              学习
             </template>
-            <el-menu-item-group title="Java基础">
+            <el-menu-item-group title="Java基础" @click="$router.push({
+          path:'/flow'
+          })">
               <!--              <el-menu-item index="1-1">Option 1</el-menu-item>-->
               <!--              <el-menu-item index="1-2">Option 2</el-menu-item>-->
             </el-menu-item-group>
             <el-menu-item-group title="Mysql">
-<!--              <el-menu-item index="1-1">Option 1</el-menu-item>-->
-<!--              <el-menu-item index="1-2">Option 2</el-menu-item>-->
+              <!--              <el-menu-item index="1-1">Option 1</el-menu-item>-->
+              <!--              <el-menu-item index="1-2">Option 2</el-menu-item>-->
             </el-menu-item-group>
             <el-menu-item-group title="算法">
-<!--              <el-menu-item index="1-3">Option 3</el-menu-item>-->
+              <!--              <el-menu-item index="1-3">Option 3</el-menu-item>-->
             </el-menu-item-group>
             <el-menu-item-group title="技术方案">
               <!--              <el-menu-item index="1-3">Option 3</el-menu-item>-->
@@ -24,20 +29,26 @@
           </el-sub-menu>
           <el-sub-menu index="2">
             <template #title>
-              <el-icon><icon-menu /></el-icon>生活
+              <el-icon>
+                <icon-menu/>
+              </el-icon>
+              生活
             </template>
             <el-menu-item-group>
               <template #title>旅行</template>
-<!--              <el-menu-item index="2-1">Option 1</el-menu-item>-->
-<!--              <el-menu-item index="2-2">Option 2</el-menu-item>-->
+              <!--              <el-menu-item index="2-1">Option 1</el-menu-item>-->
+              <!--              <el-menu-item index="2-2">Option 2</el-menu-item>-->
             </el-menu-item-group>
             <el-menu-item-group title="聚会">
-<!--              <el-menu-item index="2-3">Option 3</el-menu-item>-->
+              <!--              <el-menu-item index="2-3">Option 3</el-menu-item>-->
             </el-menu-item-group>
           </el-sub-menu>
           <el-sub-menu index="3">
             <template #title>
-              <el-icon><setting /></el-icon>帮助
+              <el-icon>
+                <setting/>
+              </el-icon>
+              帮助
             </template>
             <el-menu-item-group title="支付宝红包" @click="$router.push({
           path:'/help',query:{
@@ -58,7 +69,10 @@
           </el-sub-menu>
           <el-sub-menu index="4">
             <template #title>
-              <el-icon><message /></el-icon>我的小店
+              <el-icon>
+                <message/>
+              </el-icon>
+              我的小店
             </template>
             <el-menu-item-group title="汉服">
               <!--              <el-menu-item index="1-1">Option 1</el-menu-item>-->
@@ -75,8 +89,10 @@
         <div class="toolbar">
           <el-dropdown>
             <el-icon style="margin-right: 350px; margin-top: 3px"
-            ><setting
-            /></el-icon>
+            >
+              <setting
+              />
+            </el-icon>
             <template #dropdown>
               <el-dropdown-menu>
                 <el-dropdown-item>View</el-dropdown-item>
@@ -90,7 +106,7 @@
             a:'Option 3'
           }
           })">半岛铁盒</span>
-<!--          <el-avatar :size="50" :src="circleUrl" />-->
+          <!--          <el-avatar :size="50" :src="circleUrl" />-->
         </div>
       </el-header>
 
@@ -105,7 +121,7 @@
 
 <script lang="ts" setup>
 // import { ref } from 'vue'
-import { Menu as IconMenu, Message, Setting } from '@element-plus/icons-vue'
+import {Menu as IconMenu, Message, Setting} from '@element-plus/icons-vue'
 
 // const item = {
 //   date: '2016-05-02',
@@ -123,16 +139,20 @@ import { Menu as IconMenu, Message, Setting } from '@element-plus/icons-vue'
   background-color: var(--el-color-primary-light-7);
   color: var(--el-text-color-primary);
 }
+
 .layout-container-demo .el-aside {
   color: var(--el-text-color-primary);
   background: var(--el-color-primary-light-8);
 }
+
 .layout-container-demo .el-menu {
   border-right: none;
 }
+
 .layout-container-demo .el-main {
   padding: 0;
 }
+
 .layout-container-demo .toolbar {
   display: inline-flex;
   align-items: center;
@@ -140,11 +160,12 @@ import { Menu as IconMenu, Message, Setting } from '@element-plus/icons-vue'
   height: 100%;
   right: 20px;
 }
+
 /**
 deep改组件
  */
 
-:deep(.el-aside){
+:deep(.el-aside) {
   background: #181818 !important;
 }
 

@@ -24,6 +24,11 @@ const router = createRouter({
           path: '/article',
           name: 'article',
           component: () => import('../views/AuditArticle.vue')
+        },
+        {
+          path: '/flow',
+          name: 'flow',
+          component: () => import('../views/ArticleFlow.vue')
         }
       ]
     },

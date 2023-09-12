@@ -8,6 +8,7 @@
     </div>
     <j-editor v-model="title">
     </j-editor>
+    <button @click="saveArticle">保存文章</button>
 
 <!--    <el-button type="primary" @click="openEditorDialog">打开富文本编辑器</el-button>-->
 <!--    <el-row>-->
@@ -51,7 +52,25 @@ export default {
   },
   methods: {
     saveArticle() {
+      const article = {
+        title: this.title,
+        content: this.content
+      };
       // 在这里处理保存文章的逻辑
+      fetch('http://localhost:8088/articles', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(article)
+      }).then(data => {
+            // 在这里处理返回的数据
+            console.log(data);
+          })
+          .catch(error => {
+            // 处理错误
+            console.error(error);
+          });
       console.log('保存文章', this.title, this.content);
     },
     formatContent() {

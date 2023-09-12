@@ -53,10 +53,22 @@ export default {
                         async customUpload(file, insertFn) {
                             const formData = new FormData()
                             formData.append('file', file)
-                            Request.POST('/platadmin/fileUpload/local', formData, res => {
-                                insertFn(res.data, '', res.data)
-                            })
-                            // file 即选中的文件
+                          fetch('http://localhost:8088/articles', {
+                            method: 'POST',
+                            headers: {
+                              'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify('article')
+                          }).then(data => {
+                            // 在这里处理返回的数据
+                            console.log(data);
+                            insertFn(data.data, '', data.data)
+                          })
+                              .catch(error => {
+                                // 处理错误
+                                console.error(error);
+                              });
+                          // file 即选中的文件
                             // 自己实现上传，并得到图片 url alt href
                             // 最后插入图片
                         },
