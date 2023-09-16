@@ -84,31 +84,31 @@
     </el-aside>
 
     <el-container>
-      <el-header style="font-size: 12px;background: white; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);">
-        <el-input style="width: 70%;padding-left: 0" v-model="inputValue" placeholder="Please input"></el-input>
-        <div class="toolbar">
-          <el-dropdown>
-            <el-icon style="margin-right: 350px; margin-top: 3px"
-            >
-              <setting
-              />
-            </el-icon>
-            <template #dropdown>
-              <el-dropdown-menu>
-                <el-dropdown-item>View</el-dropdown-item>
-                <el-dropdown-item>Add</el-dropdown-item>
-                <el-dropdown-item>Delete</el-dropdown-item>
-              </el-dropdown-menu>
-            </template>
-          </el-dropdown>
-          <span style="margin-right: 10px" @click="$router.push({
-          path:'/about',query:{
-            a:'Option 3'
-          }
-          })">半岛铁盒</span>
-          <!--          <el-avatar :size="50" :src="circleUrl" />-->
-        </div>
-      </el-header>
+<!--      <el-header style="font-size: 12px;background: white; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);">-->
+<!--        <el-input style="width: 70%;padding-left: 0" v-model="inputValue" placeholder="Please input"></el-input>-->
+<!--        <div class="toolbar">-->
+<!--          <el-dropdown>-->
+<!--            <el-icon style="margin-right: 350px; margin-top: 3px"-->
+<!--            >-->
+<!--              <setting-->
+<!--              />-->
+<!--            </el-icon>-->
+<!--            <template #dropdown>-->
+<!--              <el-dropdown-menu>-->
+<!--                <el-dropdown-item>View</el-dropdown-item>-->
+<!--                <el-dropdown-item>Add</el-dropdown-item>-->
+<!--                <el-dropdown-item>Delete</el-dropdown-item>-->
+<!--              </el-dropdown-menu>-->
+<!--            </template>-->
+<!--          </el-dropdown>-->
+<!--          <span style="margin-right: 10px" @click="$router.push({-->
+<!--          path:'/about',query:{-->
+<!--            a:'Option 3'-->
+<!--          }-->
+<!--          })">半岛铁盒</span>-->
+<!--          &lt;!&ndash;          <el-avatar :size="50" :src="circleUrl" />&ndash;&gt;-->
+<!--        </div>-->
+<!--      </el-header>-->
 
       <el-main>
         <el-scrollbar>

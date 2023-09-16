@@ -52,13 +52,14 @@ export default {
                     uploadImage: {
                         async customUpload(file, insertFn) {
                             const formData = new FormData()
-                            formData.append('file', file)
-                          fetch('http://localhost:8088/articles', {
+                            formData.append('image', file)
+                          fetch('http://localhost:8080/file/upload', {
                             method: 'POST',
-                            headers: {
-                              'Content-Type': 'application/json'
-                            },
-                            body: JSON.stringify('article')
+                            // headers: {
+                            //   'Content-Type': 'application/json'
+                            // },
+                            body: formData
+                            // body: JSON.stringify({"title":"sadas","content":"34fdaef"})
                           }).then(data => {
                             // 在这里处理返回的数据
                             console.log(data);

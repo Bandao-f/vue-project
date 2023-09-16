@@ -1,12 +1,13 @@
 <template>
   <div>
-    <H1>预览</H1>
     <div v-html="title" style="border-top: 1px solid rgba(0, 0, 0, 0.2);
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   border-left: 1px solid rgba(0, 0, 0, 0.2);
   border-right: 1px solid rgba(0, 0, 0, 0.2);height: 200px;margin-bottom: 20px;">
     </div>
-    <j-editor v-model="title">
+
+    <el-input style="width: 70%;padding-left: 0" v-model="title" placeholder="Please input title"></el-input>
+    <j-editor v-model="content">
     </j-editor>
     <button @click="saveArticle">保存文章</button>
 
